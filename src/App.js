@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import List from "./Components/List";
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+ const name="ashref";
+const age=42
+const sayHello=()=>{
+  alert('hello')
+}
+ 
+  const students = [
+    { id: 0, name: "ashref", age: 28 },
+    { id: 1, name: "asma", age: 25 },
+    { id: 15, name: "ibrahim", age: 23 },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <List  students={students}   name={name} /* age={age} sayHello={sayHello} *//>
     </div>
   );
 }
